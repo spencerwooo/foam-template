@@ -1,4 +1,4 @@
-# Spencer's Wiki
+# 🎓 Spencer's Wiki
 
 > Personal adversarial examples and AI security knowledge base.
 
