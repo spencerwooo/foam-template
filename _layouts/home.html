@@ -1,11 +1,9 @@
 ---
 layout: default
-title: "Spencer's Wiki"
 ---
 
 {{ content }}
 
-<!-- <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script> -->
 <script
   src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
   type="text/javascript"
@@ -20,12 +18,36 @@ title: "Spencer's Wiki"
   });
 </script>
 <script type="text/javascript">
-  // // Add turbolinks support
-  // let Turbolinks = require("turbolinks")
-  // Turbolinks.start()
-
   // Hack: Replace page-link with "Page Title"
-  document.querySelectorAll('.markdown-body a[title]').forEach(a => {
-    a.innerText = a.title
+  window.addEventListener('DOMContentLoaded', (event) => {
+    document
+      .querySelectorAll(".markdown-body a[title]:not([href^=http])")
+      .forEach((a) => {
+        // filter to only wiki-links
+        var prev = a.previousSibling
+        var next = a.nextSibling
+        if (
+          prev instanceof Text && prev.textContent.endsWith('[') &&
+          next instanceof Text && next.textContent.startsWith(']')
+        ) {
+
+          // remove surrounding brackets
+          prev.textContent = prev.textContent.slice(0, -1)
+          next.textContent = next.textContent.slice(1)
+
+          // add CSS list for styling
+          a.classList.add('wikilink')
+
+          // replace page-link with "Page Title"...
+          a.innerText = a.title
+
+          // ...and normalize the links to allow html pages navigation
+          a.href = normalizeMdLink(a.href)
+        }
+      });
+
+    document.querySelectorAll(".github-only").forEach((el) => {
+      el.remove()
+    })
   })
 </script>

@@ -43,4 +43,19 @@ a {
 a:hover {
   opacity: 0.8;
   border: none;
+  text-decoration: none;
+}
+
+.wikilink:before {
+  content: "[[";
+  opacity: 0.5;
+}
+
+.wikilink:after {
+  content: "]]";
+  opacity: 0.5;
+}
+
+.github-only {
+  display: none;
 }
