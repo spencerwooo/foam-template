@@ -7,6 +7,8 @@
 .markdown-body {
   max-width: 800px;
   font-size: 16px;
+  font-family: 'IBM Plex Serif', Constantia, Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .markdown-body p {
@@ -29,8 +31,8 @@ h3,
 h4,
 h5,
 blockquote {
-  font-family: 'IBM Plex Serif', Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif',
-    'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+  font-family: 'IBM Plex Mono', 'Source Han Sans SC', 'Microsoft YaHei', monospace, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 a {
@@ -40,4 +42,5 @@ a {
 
 a:hover {
   opacity: 0.8;
+  border: none;
 }
