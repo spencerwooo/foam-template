@@ -1,7 +1,8 @@
 ---
 ---
 
-@import "{{ site.theme }}";
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Serif:wght@400;700&display=swap');
+@import '{{ site.theme }}';
 
 .markdown-body {
   max-width: 800px;
@@ -28,6 +29,15 @@ h3,
 h4,
 h5,
 blockquote {
-  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
-    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
+  font-family: 'IBM Plex Serif', Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif',
+    'Bitstream Vera Serif', 'Liberation Serif', Georgia, serif;
+}
+
+a {
+  color: #0070f3;
+  transition: opacity 0.2s;
+}
+
+a:hover {
+  opacity: 0.8;
 }
