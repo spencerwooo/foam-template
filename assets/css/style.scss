@@ -29,7 +29,11 @@ h1,
 h2,
 h3,
 h4,
-h5,
+h5 {
+  font-family: 'IBM Plex Serif', Constantia, Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji',
+    'Segoe UI Emoji', 'Segoe UI Symbol';
+}
+
 blockquote {
   font-family: 'IBM Plex Mono', 'Source Han Sans SC', 'Microsoft YaHei', monospace, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
@@ -47,12 +51,12 @@ a:hover {
 }
 
 .wikilink:before {
-  content: "[[";
+  content: '[[';
   opacity: 0.5;
 }
 
 .wikilink:after {
-  content: "]]";
+  content: ']]';
   opacity: 0.5;
 }
 

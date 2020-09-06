@@ -18,35 +18,43 @@ layout: default
   });
 </script>
 <script type="text/javascript">
+  let MD_EXT = ['.md', '.markdown', '.mdx', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext', '.text', '.Rmd']
+  function normalizeMdLink(link) {
+    let url = new URL(link)
+    let mdFileExt = MD_EXT.find(ext => url.pathname.endsWith(ext))
+    if (mdFileExt) {
+      url.pathname = url.pathname.slice(0, mdFileExt.length * -1)
+    }
+    return url.toString()
+  }
   // Hack: Replace page-link with "Page Title"
-  window.addEventListener('DOMContentLoaded', (event) => {
-    document
-      .querySelectorAll(".markdown-body a[title]:not([href^=http])")
-      .forEach((a) => {
-        // filter to only wiki-links
-        var prev = a.previousSibling
-        var next = a.nextSibling
-        if (
-          prev instanceof Text && prev.textContent.endsWith('[') &&
-          next instanceof Text && next.textContent.startsWith(']')
-        ) {
+  window.addEventListener('DOMContentLoaded', event => {
+    document.querySelectorAll('.markdown-body a[title]:not([href^=http])').forEach(a => {
+      // filter to only wiki-links
+      let prev = a.previousSibling
+      let next = a.nextSibling
+      if (
+        prev instanceof Text &&
+        prev.textContent.endsWith('[') &&
+        next instanceof Text &&
+        next.textContent.startsWith(']')
+      ) {
+        // remove surrounding brackets
+        prev.textContent = prev.textContent.slice(0, -1)
+        next.textContent = next.textContent.slice(1)
 
-          // remove surrounding brackets
-          prev.textContent = prev.textContent.slice(0, -1)
-          next.textContent = next.textContent.slice(1)
+        // add CSS list for styling
+        a.classList.add('wikilink')
 
-          // add CSS list for styling
-          a.classList.add('wikilink')
+        // replace page-link with "Page Title"...
+        a.innerText = a.title
 
-          // replace page-link with "Page Title"...
-          a.innerText = a.title
+        // ...and normalize the links to allow html pages navigation
+        a.href = normalizeMdLink(a.href)
+      }
+    })
 
-          // ...and normalize the links to allow html pages navigation
-          a.href = normalizeMdLink(a.href)
-        }
-      });
-
-    document.querySelectorAll(".github-only").forEach((el) => {
+    document.querySelectorAll('.github-only').forEach(el => {
       el.remove()
     })
   })
