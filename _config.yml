@@ -10,3 +10,4 @@ plugins:
 
 theme: jekyll-theme-primer
 repository: spencerwooo/foam-wiki
+permalink: pretty
