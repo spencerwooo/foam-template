@@ -2,3 +2,9 @@ title: 🎓 Spencer's Wiki
 
 plugins:
   - jekyll-katex
+  - jekyll-default-layout
+  - jekyll-relative-links
+  - jekyll-readme-index
+  - jekyll-titles-from-headings
+
+theme: jekyll-theme-primer
