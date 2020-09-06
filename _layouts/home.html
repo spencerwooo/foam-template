@@ -1,0 +1,30 @@
+---
+layout: default
+---
+
+{{ content }}
+
+<script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"
+  type="text/javascript"
+></script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Config({
+      tex2jax: {
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+          inlineMath: [['$','$']]
+      }
+  });
+</script>
+<script type="text/javascript">
+  // Add turbolinks support
+  let Turbolinks = require("turbolinks")
+  Turbolinks.start()
+
+  // Hack: Replace page-link with "Page Title"
+  document.querySelectorAll('.markdown-body a[title]').forEach(a => {
+    a.innerText = a.title
+  })
+</script>
