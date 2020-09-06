@@ -8,3 +8,4 @@ plugins:
   - jekyll-titles-from-headings
 
 theme: jekyll-theme-primer
+repository: spencerwooo/foam-wiki
