@@ -1,4 +1,4 @@
-# 🥽 Spencer's Wiki
+# 🔬 Spencer's Wiki
 
 > Personal adversarial examples and AI security knowledge base.
 
@@ -31,7 +31,7 @@ Foam is a personal knowledge management and sharing system inspired by Roam Rese
 
 ---
 
-🥽 **Spencer's Wiki** © 2020
+🔬 **Spencer's Wiki** © 2020
 
 Built with 💙 and 🌟 by Spencer Woo.
 
