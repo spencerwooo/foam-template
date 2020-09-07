@@ -1,6 +1,4 @@
-<div class="github-only">
-  <h1>🥽 Spencer's Wiki</h1>
-</div>
+# 🥽 Spencer's Wiki
 
 > Personal adversarial examples and AI security knowledge base.
 
