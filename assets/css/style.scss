@@ -1,14 +1,11 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;700&display=swap');
-@import '{{ site.theme }}';
+@import "{{ site.theme }}";
 
 .markdown-body {
   max-width: 800px;
   font-size: 16px;
-  font-family: 'IBM PLex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Source Han Sans SC',
-    'Microsoft YaHei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .markdown-body p {
@@ -25,59 +22,22 @@ input.task-list-item-checkbox {
   margin-right: 4px;
 }
 
-.markdown-body h1 {
-  font-size: 1.8em;
-}
-
-#-spencers-wiki {
-  margin-top: 24px !important;
-}
-
 h1,
 h2,
 h3,
 h4,
-h5 {
-  font-family: Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif', 'Bitstream Vera Serif',
-    'Liberation Serif', Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
-    'Segoe UI Symbol';
-}
-
-tt,
-code,
+h5,
 blockquote {
-  font-family: 'IBM Plex Mono', 'Source Han Sans SC', 'Microsoft YaHei', monospace, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: Constantia, "Lucida Bright", Lucidabright, "Lucida Serif", Lucida,
+    "DejaVu Serif", "Bitstream Vera Serif", "Liberation Serif", Georgia, serif;
 }
 
-a {
-  color: #0070f3;
-  transition: opacity 0.2s;
-}
-
-a:hover {
+.wikilink::before {
+  content: "[[";
   opacity: 0.8;
-  border: none;
-  text-decoration: none;
 }
 
-.wikilink:before {
-  content: '[[';
-  opacity: 0.5;
-}
-
-.wikilink:after {
-  content: ']]';
-  opacity: 0.5;
-}
-
-.github-only {
-  display: none;
-}
-
-.callout {
-  background: #e7f1ff;
-  padding: 4px 16px;
-  color: black;
-  border-radius: 4px;
+.wikilink::after {
+  content: "]]";
+  opacity: 0.8;
 }

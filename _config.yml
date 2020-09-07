@@ -1,4 +1,4 @@
-title: 🥽 Spencer's Wiki
+title: Foam Template
 
 plugins:
   - jekyll-katex
@@ -9,5 +9,5 @@ plugins:
   - jekyll-optional-front-matter
 
 theme: jekyll-theme-primer
-repository: spencerwooo/foam-wiki
+repository: spencerwooo/foam-template
 permalink: pretty
