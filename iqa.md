@@ -2,12 +2,11 @@
 
 > IQA methods, based on my own research and survey.
 
-- [Image Quality Assessment](#image-quality-assessment)
-  - [Method overview](#method-overview)
-  - [Common algorithms](#common-algorithms)
-    - [MSE and PSNR](#mse-and-psnr)
-    - [Structural similarity (SSIM)](#structural-similarity-ssim)
-  - [References and articles](#references-and-articles)
+- [Method overview](#method-overview)
+- [Common algorithms](#common-algorithms)
+  - [MSE and PSNR](#mse-and-psnr)
+  - [Structural similarity (SSIM)](#structural-similarity-ssim)
+- [References and articles](#references-and-articles)
 
 ## Method overview
 

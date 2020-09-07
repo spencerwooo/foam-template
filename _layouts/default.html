@@ -32,7 +32,6 @@
       crossorigin="anonymous"
       onload="renderMathInElement(document.body);"
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/turbolinks@5.2.0/dist/turbolinks.min.js"></script>
     <script type="text/javascript">
       let MD_EXT = ['.md', '.markdown', '.mdx', '.mdown', '.mkdn', '.mkd', '.mdwn', '.mdtxt', '.mdtext', '.text', '.Rmd']
       function normalizeMdLink(link) {
@@ -44,7 +43,7 @@
         return url.toString()
       }
       // Hack: Replace page-link with "Page Title"
-      document.addEventListener('turbolinks:load', event => {
+      document.addEventListener('DOMContentLoaded', event => {
       // window.addEventListener('DOMContentLoaded', event => {
         document.querySelectorAll('.markdown-body a[title]:not([href^=http])').forEach(a => {
           // filter to only wiki-links

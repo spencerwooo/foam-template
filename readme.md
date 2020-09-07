@@ -8,11 +8,10 @@ I mainly focus on summarizing CVPR / ICLR and other computer vision / adversaria
 
 ## Table of contents
 
-- [🥽 Spencer's Wiki](#-spencers-wiki)
-  - [Table of contents](#table-of-contents)
-  - [Notes](#notes)
-  - [Papers](#papers)
-  - [How's this generated?](#hows-this-generated)
+- [Table of contents](#table-of-contents)
+- [Notes](#notes)
+- [Papers](#papers)
+- [How's this generated?](#hows-this-generated)
 
 ## Notes
 
