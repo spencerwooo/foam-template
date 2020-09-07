@@ -9,7 +9,7 @@
 
 ## FGSM original definition
 
-The **Fast Gradient Sign Method (FGSM)** by Goodfellow et al. (NIPS 2014) is designed to attack deep neural networks. The idea is to maximize certain loss function $\mathcal{J}(x; w)$ subject to an upper bound on the perturbation, for instance: $||x-x_0||_\infty \leq \eta$.
+The **Fast Gradient Sign Method (FGSM)** by Goodfellow et al. (NIPS 2014) is designed to attack deep neural networks. The idea is to maximize certain loss function $\mathcal{J}(x; w)$ subject to an upper bound on the perturbation, for instance: $\|x-x_0\|_\infty \leq \eta$.
 
 Formally, we define FGSM as follows. Given a loss function $\mathcal{J}(x; w)$, the FGSM creates an attack $x$ with:
 
@@ -46,10 +46,8 @@ $$
 $$
 
 <p class="callout">
-  <h4>Holder's Inequality:</h4>
-
+  <b>Holder's Inequality:</b>
   Let $x \in \mathbb{R}^d$ and $y \in \mathbb{R}^d$, for any $p$ and $q$ that $1/p+1/q=1\ (p\in[1,\infty])$, we have the following Inequality: $-\|x\|_p\|y\|_q\leq|x^Ty|\leq\|x\|_p\|y\|_q$.
-
 </p>
 
 We consider the Holder's inequality (the negative side), and so, we can show that:

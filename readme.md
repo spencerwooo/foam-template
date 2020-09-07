@@ -31,9 +31,7 @@ Foam is a personal knowledge management and sharing system inspired by Roam Rese
 
 ---
 
-🔬 **Spencer's Wiki** © 2020
-
-Built with 💙 and 🌟 by Spencer Woo.
+🔬 **Spencer's Wiki** © 2020. Built with 💙 and 🌟 by Spencer Woo.
 
 > [Portfolio](https://spencerwoo.com/) · [Blog](https://blog.spencerwoo.com/) · [GitHub](https://github.com/spencerwooo)
 
