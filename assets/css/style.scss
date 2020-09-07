@@ -1,14 +1,14 @@
 ---
 ---
 
-@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Serif:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;700&family=IBM+Plex+Sans:wght@400;700&family=IBM+Plex+Serif:wght@400;700&display=swap');
 @import '{{ site.theme }}';
 
 .markdown-body {
   max-width: 800px;
   font-size: 16px;
-  font-family: 'IBM Plex Serif', Constantia, Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji',
-    'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'IBM PLex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, 'Source Han Sans SC',
+    'Microsoft YaHei', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
 .markdown-body p {
@@ -25,12 +25,17 @@ input.task-list-item-checkbox {
   margin-right: 4px;
 }
 
+.markdown-body h1 {
+  font-size: 1.8em;
+}
+
 h1,
 h2,
 h3,
 h4,
 h5 {
-  font-family: 'IBM Plex Serif', Constantia, Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji',
+  font-family: 'IBM Plex Serif', Constantia, 'Lucida Bright', Lucidabright, 'Lucida Serif', Lucida, 'DejaVu Serif',
+    'Bitstream Vera Serif', 'Liberation Serif', Georgia, 'Source Han Serif SC', sans-serif, 'Apple Color Emoji',
     'Segoe UI Emoji', 'Segoe UI Symbol';
 }
 
@@ -64,4 +69,11 @@ a:hover {
 
 .github-only {
   display: none;
+}
+
+.callout {
+  background: #ede7ff;
+  padding: 4px 16px;
+  color: black;
+  border-radius: 4px;
 }
